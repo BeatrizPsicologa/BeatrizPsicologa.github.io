@@ -61,6 +61,28 @@
     .imagem {
       max-width: 45%;
     }
+    @media (max-width: 768px) {
+  .texto, .imagem {
+    max-width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .texto h1 {
+    font-size: 2em;
+  }
+
+  .texto p {
+    font-size: 1em;
+  }
+
+  .botao-agendar {
+    width: 100%;
+    text-align: center;
+  }
     .imagem img {
       width: 100%;
       border-radius: 20px;
