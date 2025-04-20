@@ -80,7 +80,7 @@
   }
 
   .botao-agendar {
-    width: 100%;
+    width: 80%;
     text-align: center;
   }
     .imagem img {
@@ -129,6 +129,31 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       font-size: 0.9em;
     }
+      @media (max-width: 768px) {
+  .sobre-mim, .imagem img {
+    max-width: 100%;
+  }
+
+  .sobre-mim {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sobre-texto {
+    font-size: 3em;
+  }
+  .sobre-texto h2 {
+    font-size: 2em;
+  }
+
+  .sobre-texto h3 {
+    font-size: 1em;
+  }
+
+  .botao-comecar {
+    width: 80%;
+    text-align: center;
+  }
     .atuacao {
       padding: 50px 40px;
       text-align: center;
