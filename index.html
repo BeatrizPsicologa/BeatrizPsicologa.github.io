@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beatriz Simplício - Psicóloga</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f1e6df;
+      color: #5e1f1a;
+    }
+    header {
+      background-color: #d6b09c;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: bold;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #5e1f1a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+    .texto {
+      max-width: 50%;
+    }
+    .texto h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .texto p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+    .botao-agendar {
+      margin-top: 30px;
+      display: inline-block;
+      background-color: #e06666;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .botao-agendar::before {
+      content: '📅 ';
+    }
+    .imagem {
+      max-width: 45%;
+    }
+    .imagem img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .sobre-mim {
+      background-color: #d6b09c;
+      padding: 50px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .sobre-imagem {
+      max-width: 40%;
+    }
+    .sobre-imagem img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .sobre-texto {
+      max-width: 55%;
+      padding-left: 30px;
+      font-size: 1.1em;
+      line-height: 1.8em;
+    }
+    .sobre-texto h2 {
+      font-size: 1.6em;
+      margin-bottom: 0;
+    }
+    .sobre-texto h3 {
+      margin-top: 5px;
+      font-weight: normal;
+      font-size: 1.1em;
+    }
+    .botao-comecar {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #e06666;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      font-size: 0.9em;
+    }
+    .atuacao {
+      padding: 50px 40px;
+      text-align: center;
+    }
+    .atuacao h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 0 1 calc(25.25% - 20px);
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.10);
+}
+
+/* Animação simples fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .card {
+    flex: 0 1 calc(45% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 1 100%;
+  }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+.bloco-terapia {
+    background: url('background01.PNG') no-repeat center center;
+    background-size: cover;
+    padding: 40px 20px;
+    border-radius: 15px;
+    width: 100%;
+    margin: 40px auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #5b392d;
+    height: 75vh;
+    display: flex;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bloco-terapia .conteudo {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: #4a3d35;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .bloco-terapia h2 {
+    color: #7b4d3a;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .bloco-terapia ol {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .bloco-terapia ol li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .bloco-terapia p {
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 16px;
+  }
+
+  .bloco-terapia a.botao-agendar {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #f75c7a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .bloco-terapia a.botao-agendar:hover {
+    background-color: #e94e6e;
+  }
+
+  @media (max-width: 600px) {
+    .bloco-terapia {
+      padding: 20px 10px;
+    }
+
+    .bloco-terapia h2 {
+      font-size: 20px;
+    }
+
+    .bloco-terapia ol li, .bloco-terapia p {
+      font-size: 14px;
+    }
+
+    .bloco-terapia a.botao-agendar {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  .faq {
+  padding: 60px 20px;
+  background-color: #fdf8f5;
+  font-family: 'Georgia', serif;
+  color: #5c2a1d;
+}
+
+.faq-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.faq-left {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center;     /* Centraliza horizontalmente */
+  height: 100%;
+}
+
+.faq-icon {
+  font-size: 40px;
+  background-color: #9d6957;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-left h2 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.faq-right {
+  flex: 2;
+}
+
+.pergunta {
+  margin-bottom: 30px;
+}
+
+.pergunta h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6d2a1d;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.pergunta p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pergunta a {
+  color: #7c1f1f;
+  text-decoration: underline;
+}
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <img src="1234.png" alt="Logo da empresa"width="150" height="75">
+    <nav>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#processo">Processo terapêutico</a>
+      <a href="#perguntas">Perguntas</a>
+      <a href="#contato">Contato</a>
+      
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="texto">
+      <h1>Cuidar da sua saúde mental é um passo para uma vida mais leve e significativa</h1>
+      <p>A Terapia Cognitivo-Comportamental ajuda você a superar desafios, melhorar seus relacionamentos e fortalecer sua autoestima. Agende um atendimento</p>
+      <p>Atendimentos <strong>online</strong> e <strong>presenciais</strong>, de forma acolhedora e segura. Agende um atendimento.</p>
+      <a class="botao-agendar" href="https://wa.me/5564993222621">AGENDAR SEU ATENDIMENTO!</a>
+    </div>
+    <div class="imagem">
+      <img src="imagem01png.png" alt="Psicóloga Beatriz Simplício">
+
+    </div>
+  </div>
+
+  <section class="sobre-mim" id="sobre">
+    <div class="sobre-imagem">
+      <img src="imagem02png.png" alt="Psicóloga com livro">
+    </div>
+    <div class="sobre-texto">
+      <h2>Olá, meu nome é Beatriz Simplício</h2>
+      <h3>CRP: 09/12224</h3>
+      <p>Sou psicóloga com abordagem baseada na Terapia Cognitivo-Comportamental (TCC) e meu objetivo é ajudar você a compreender e transformar padrões de pensamento e comportamento que afetam sua saúde emocional.</p>
+      <p>Atualmente, estou me especializando em Terapia Cognitivo-comportamental e Psicologia da Saúde, o que amplia meu olhar para as relações entre mente e corpo e enriquece o cuidado que ofereço.</p>
+      <p>Acredito na importância de um espaço seguro e acolhedor, onde você possa se expressar livremente e se sentir compreendido(a). A terapia é um caminho de autoconhecimento, e estou aqui para caminhar ao seu lado.</p>
+      <p>&rarr; Agende seu atendimento e dê o primeiro passo para o seu bem-estar.</p>
+      <a class="botao-comecar" href="https://wa.me/5564993222621">VAMOS COMEÇAR!</a>
+    </div>
+  </section>
+
+  <section class="atuacao" id="atuacao">
+    <h2>Atuação</h2>
+    <div class="cards fade-in">
+      <div class="card">
+        <h3>🧘 HUMOR ANSIOSO</h3>
+        <p>Proporciono um espaço de acolhimento para compreender e lidar com os desafios que a ansiedade traz no dia a dia.</p>
+      </div>
+      <div class="card">
+        <h3>💖 AUTOESTIMA</h3>
+        <p>Auxilio você a fortalecer sua relação consigo mesmo(a), promovendo um olhar mais acolhedor para sua história e experiências.</p>
+      </div>
+      <div class="card">
+        <h3>🍽️ COMPORTAMENTOS ALIMENTARES</h3>
+        <p>Trabalhamos sua relação com a comida, ajudando a construir hábitos mais saudáveis e respeitosos consigo mesmo(a).</p>
+      </div>
+      <div class="card">
+        <h3>🌧️ HUMOR DEPRESSIVO</h3>
+        <p>Ofereço suporte para que você possa explorar suas emoções e encontrar novas formas de lidar com momentos difíceis.</p>
+      </div>
+      <div class="card">
+        <h3>💞 RELACIONAMENTOS AMOROSOS</h3>
+        <p>Auxilio na reflexão sobre as suas relações amorosas, ajudando a lidar com desafios e conflitos.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="bloco-terapia" id="processo">
+    <div class="conteudo"> 
+      <h2>Como funciona o processo terapêutico?</h2>
+      <ol>
+        <li><strong>Avaliação e metas:</strong> Exploramos sua história, compreendemos suas dificuldades e traçamos objetivos claros para a terapia.</li>
+        <li><strong>Plano de tratamento:</strong> Com base na Terapia Cognitivo-Comportamental (TCC), estruturamos estratégias eficazes para seu desenvolvimento.</li>
+        <li><strong>Intervenção e mudança:</strong> Identificamos padrões de pensamento, reformulamos crenças negativas e promovemos mudanças saudáveis.</li>
+        <li><strong>Encerramento e prevenção:</strong> Quando os objetivos são alcançados, espaçamos as sessões e traçamos um plano para manter os avanços conquistados.</li>
+      </ol>
+      <p>A terapia é um caminho para mais equilíbrio e bem-estar. Se quiser dar esse passo, estou aqui para te ajudar!</p>
+      <a href="https://wa.me/5564993222621" class="botao-agendar">📅 AGENDAR CONSULTA</a>
+    </div>
+  </section>
+  <section class="faq" id="perguntas">
+    <div class="faq-container">
+      <div class="faq-left">
+        <div class="faq-icon">📝</div>
+        <h2>Perguntas<br>Frequentes</h2>
+      </div>
+      <div class="faq-right">
+        <div class="pergunta">
+          <h3>• Como funciona o primeiro atendimento?</h3>
+          <p>O primeiro atendimento é o momento inicial de contato entre paciente e psicólogo. Nessa sessão, é feita uma escuta do que motivou a busca por atendimento, além de uma avaliação geral sobre diferentes áreas da vida. Também é explicado como funciona a abordagem utilizada e o processo terapêutico, para que o paciente possa decidir se deseja iniciar o acompanhamento.</p>
+        </div>
+        <div class="pergunta">
+          <h3>• Qual a duração e a frequência dos atendimentos?</h3>
+          <p>As sessões duram 50 minutos. A frequência pode ser semanal ou quinzenal, de acordo com a necessidade e disponibilidade de cada pessoa.</p>
+        </div>
+        <div class="pergunta">
+          <h3>• Como vão ocorrer os atendimentos?</h3>
+          <p>As sessões ocorrem de forma <strong>online</strong> e <strong>presencial</strong>.</p>
+        </div>
+        <div class="pergunta">
+          <h3>• Quanto tempo dura o tratamento?</h3>
+          <p>A duração do tratamento depende de cada pessoa e do que está sendo trabalhado. Após a avaliação inicial, é possível estimar um tempo, considerando a frequência e intensidade do sofrimento, além dos objetivos da terapia, como autoconhecimento, autonomia e melhorias nos relacionamentos.</p>
+        </div>
+        <div class="pergunta">
+          <h3>• Você aceita planos de saúde?</h3>
+          <p>Atualmente, não atendo por planos de saúde, mas emito recibos que podem ser usados para solicitar reembolso diretamente com a operadora, conforme as regras do seu plano.</p>
+        </div>
+        <div class="pergunta">
+          <h3>• Qual o valor das sessões?</h3>
+          <p>Para informações sobre valores e pacotes, <a href="https://wa.me/5564993222621">clique aqui</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer style="background-color: #d6b09c; padding: 40px; display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; text-align: center;">
+  
+    <!-- Contato -->
+    <div style="flex: 1; min-width: 250px; color: #5e1f1a; font-size: 1em; line-height: 1.8em;">
+      <section class="contato" id="contato">
+        <h3>Contato:</h3>
+        <p>📞 (64) 99322-2621</p>
+        <p>📧 <a href="mailto:beatrizsimpliciosilva@outlook.com" style="color: #5e1f1a;">Beatrizsimpliciosilva@outlook.com</a></p>
+        <p>🪪 CRP: 09/21224</p>
+        <div style="margin-top: 15px;">
+          <a href="https://wa.me/5564993222621" target="_blank" style="margin-right: 15px;">
+            <img src="Whats_icon.png" alt="WhatsApp" width="25" height="25">
+          </a>
+          <a href="https://www.instagram.com/beatrissimplicio/" target="_blank" style="margin-right: 15px;">
+            <img src="Insta_icon.png" alt="Instagram" width="25" height="25">
+          </a>
+          <a href="tel:+5564993222621">
+            <img src="Phone_icon.png" alt="Telefone" width="25" height="25">
+          </a>
+        </div>
+      </section>
+    </div>
+  
+    <!-- Endereço no centro -->
+    <div style="flex: 1; min-width: 250px; color: #5e1f1a;">
+      <h3>Endereço:</h3>
+      <p>📍 Rua tiradentes, nº 481</p>
+      <p>Bairro Centro - Itumbiara/GO</p>
+      <p>Atendimento online e presencial</p>
+      <p><a href="https://www.google.com/maps/place/Psique+Sa%C3%BAde/data=!4m2!3m1!1s0x0:0x1bd8d00a99096b91?sa=X&ved=1t:2428&ictx=111" style="color: #5e1f1a;">Psiquê Espaço de saúde</a></p>
+      
+    </div>
+  
+    <!-- Logo à direita -->
+    <div style="flex: 1; min-width: 200px; display: flex; justify-content: center;">
+      <img src="1234.png" alt="Logo Beatriz Simplício Psicóloga" style="max-width: 100%; height: auto;">
+    </div>
+  
+  </footer>
+  
+</body>
+</html>
